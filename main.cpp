@@ -313,7 +313,7 @@ int get_goods_stock( player * pplayer ){
 //显示游戏作者
 void game_author(){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "游戏作者：宇宙新闻台" );
 	puts( "联系方式：QQ.1982775886" );
@@ -345,13 +345,13 @@ player new_game(){
 		1
 	};
 
-	system( "cls" );
+	system( "clear" );
 
 	printf( "请输入你的姓名：" );
 
 	gets( new_player.name );
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "俺是一个农民。\n" );
 
@@ -369,7 +369,7 @@ player new_game(){
 
 	_getch();
 
-	system( "cls" );
+	system( "clear" );
 
 	puts("翌日清晨---村口\n");
 
@@ -395,7 +395,7 @@ int save_mngmnt( player * pplayer, data * pdat, int id ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		printf( "-存档-\n\n", id );
 
@@ -526,7 +526,7 @@ void data_mngmnt( player * pplayer ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "-存档管理-\n" );
 
@@ -664,7 +664,7 @@ void bank_work( player * pplayer ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "-低息危险银行欢迎你-\n" );
 
@@ -713,7 +713,7 @@ void sell_goods( player * pplayer, int id, int price ){
 
 		while( 0 == exit_flag ){
 
-			system( "cls" );
+			system( "clear" );
 
 			printf( "-你的仓库里一共有 %d 件 %s ，是否全部卖出？-\n\n", pplayer->my_list[id], goods_list[id].name );
 
@@ -818,7 +818,7 @@ void buy_goods( player * pplayer, int id, int price ){
 
 		while( 0 == exit_flag ){
 
-			system( "cls" );
+			system( "clear" );
 
 			int mnum = pplayer->money / price;
 			int cnum = pplayer->capacity - get_goods_stock( pplayer );
@@ -912,7 +912,7 @@ void trade_goods( player * pplayer, int id, int price ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		printf( "-%s（单价：%d）-\n\n", goods_list[id].name, price );
 
@@ -948,7 +948,7 @@ void random_news( int rlist[], int plist[] ){
 
 	int rd = rand32() % GOODS_LIST_MAX;
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "-北京新闻播报-\n" );
 
@@ -973,7 +973,7 @@ void random_news( int rlist[], int plist[] ){
 //随机事件驱动
 void random_event( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	int id = rand32() % 25;
 
@@ -1262,7 +1262,7 @@ void random_event( player * pplayer ){
 
 void hehe( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "-街角-\n" );
 
@@ -1344,7 +1344,7 @@ void black_market( player * pplayer ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		printf( "-当地黑市-\t\t\t\t-仓库（%d/%d）现金：%d-\n\n", get_goods_stock( pplayer ), pplayer->capacity, pplayer->money );
 
@@ -1417,7 +1417,7 @@ void internet_bar( player * pplayer ){
 
 	if( pplayer->money < 5 ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "网吧老板：没钱上什么网，赶快滚。" );
 
@@ -1431,7 +1431,7 @@ void internet_bar( player * pplayer ){
 
 		while( 0 == exit_flag ){
 		
-			system( "cls" );
+			system( "clear" );
 
 			puts( "-网吧-\n" );
 
@@ -1452,7 +1452,7 @@ void internet_bar( player * pplayer ){
 
 				case '2':{
 
-					system( "cls" );
+					system( "clear" );
 
 					puts( "你开始在淘宝网刷单。（接下来请反复按任意键直到刷单完成）\n" );
 
@@ -1466,7 +1466,7 @@ void internet_bar( player * pplayer ){
 						_getch();
 					}
 
-					system( "cls" );
+					system( "clear" );
 
 					int income = 5 + rand() % 20;
 
@@ -1509,7 +1509,7 @@ int exit_ask(){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "-你要退出游戏吗？-\n" );
 
@@ -1542,7 +1542,7 @@ int exit_ask(){
 //讨债
 void collecting_debts( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "半天过后---村口\n" );
 
@@ -1692,7 +1692,7 @@ void collecting_debts( player * pplayer ){
 //回家
 void go_home( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "-家里-\n" );
 
@@ -1720,7 +1720,7 @@ void beijing_station( player * pplayer ){
 
 	if( pplayer->money < 100 ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "检票员：没有买票不准进站！" );
 
@@ -1742,7 +1742,7 @@ void beijing_station( player * pplayer ){
 
 		go_home( pplayer );
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "坐火车一来一回花了俺100元" );
 
@@ -1754,7 +1754,7 @@ void beijing_station( player * pplayer ){
 //医院
 void hospital( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "-医院-\n" );
 
@@ -1768,7 +1768,7 @@ void hospital( player * pplayer ){
 
 		while( 0 == exit_flag ){
 
-			system( "cls" );
+			system( "clear" );
 
 			puts( "-你要开刀吗？-\n" );
 
@@ -1779,7 +1779,7 @@ void hospital( player * pplayer ){
 
 			if( key == '1' ){
 
-				system( "cls" );
+				system( "clear" );
 
 				if( pplayer->money + pplayer->deposit < 10000 ){
 
@@ -1801,7 +1801,7 @@ void hospital( player * pplayer ){
 
 						_getch();
 
-						system( "cls" );
+						system( "clear" );
 
 						puts( "游戏结束，请按任意键退出程序。" );
 
@@ -1829,7 +1829,7 @@ void hospital( player * pplayer ){
 
 						_getch();
 
-						system( "cls" );
+						system( "clear" );
 
 						puts( "游戏结束，请按任意键退出程序。" );
 
@@ -1843,7 +1843,7 @@ void hospital( player * pplayer ){
 			}
 			else if( key == '2' ){
 
-				system( "cls" );
+				system( "clear" );
 
 				puts( "医生：无知，不开刀就等死吧。" );
 
@@ -1904,7 +1904,7 @@ void hospital( player * pplayer ){
 //慈善机构
 void chishan( player * pplayer ){
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "-慈善机构-\n" );
 
@@ -1961,7 +1961,7 @@ void game_start( player iplayer ){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 
 		printf( "%s的状态：在北京混了 %d/60 天\n\n", iplayer.name, iplayer.ndays );
@@ -2076,7 +2076,7 @@ void game_start( player iplayer ){
 		}
 
 
-		system( "cls" );
+		system( "clear" );
 
 		if( iplayer.hp < 20 ){
 
@@ -2086,7 +2086,7 @@ void game_start( player iplayer ){
 				
 				_getch();
 
-				system( "cls" );
+				system( "clear" );
 
 				puts( "游戏结束，请按任意键退出程序。" );
 
@@ -2116,7 +2116,7 @@ void game_start( player iplayer ){
 
 				_getch();
 
-				system( "cls" );
+				system( "clear" );
 
 				puts( "游戏结束，请按任意键退出程序。" );
 
@@ -2173,7 +2173,7 @@ void game_start( player iplayer ){
 
 				_getch();
 
-				system( "cls" );
+				system( "clear" );
 
 				puts( "游戏结束，请按任意键退出程序。" );
 
@@ -2204,7 +2204,7 @@ void main_menu(){
 
 	while( 0 == exit_flag ){
 
-		system( "cls" );
+		system( "clear" );
 
 		puts( "-北京浮生记-\n" );
 
@@ -2242,7 +2242,7 @@ void main_menu(){
 		}
 	}
 
-	system( "cls" );
+	system( "clear" );
 
 	puts( "游戏结束，请按任意键退出程序。" );
 
